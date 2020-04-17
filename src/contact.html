@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>WEB222 Store - Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Homemade+Apple|Luckiest+Guy|Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <script src="contact.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1><img src="./images/logo.png" alt="" /> <a href="index.html">MIXSTYLE SHOES STORE</a></h1>
+
+      <p>You will find a pair of shoes of your own style <a href="contact.html">here.</a></p>
+    </header>
+
+    <div id="store">
+      <nav class="nav">
+        <br />
+        <div id="home"><a href="index.html">Home</a></div>
+        <div id="casual">Casual</div>
+        <div id="boots">Boots</div>
+        <div id="sneaker">Sneaker</div>
+        <div id="running">Running</div>
+        <div id="Flat">Flat</div>
+        <div id="contact"><a href="contact.html">Contact</a></div>
+        <div id="cad">Canada/CAD</div>
+      </nav>
+      <main>
+        <h2>Sign Up Your Information</h2>
+        <div class="info">
+          <form id="contactInfo" method="post" action="https://httpbin.org/post">
+            <fieldset id="Info">
+              <legend>CONTACT INFORMATION FORM</legend>
+
+              <label for="firstName"> First Name:* </label>
+              <input id="firstName" type="text" name="first-name" /><br />
+              <label for="lastName"> Last Name:* </label>
+              <input
+                id="lastName"
+                type="text"
+                name="last-name"
+                size="25"
+                maxlength="50"
+                required
+              /><br />
+
+              <label for="email"> Email Address： </label>
+              <input
+                id="email"
+                type="email"
+                name="emailAddress"
+                size="25"
+                maxlength="50"
+                required
+              />
+              <br />
+
+              <label for="address"> Address: </label>
+              <input id="address" type="text" name="address" size="25" maxlength="50" />
+              <br />
+
+              <label for="city"> City: </label>
+              <input id="city" name="city" list="cities" size="25" maxlength="50" required /><br />
+              <datalist id="cities">
+                <option value="Ottawa"></option>
+                <option value="Edmonton"></option>
+                <option value="Victoria"></option>
+                <option value="Winnipeg"></option>
+                <option value="Fredericton"></option>
+                <option value="St. John's"></option>
+                <option value="Halifax"></option>
+                <option value="Toronto"></option>
+                <option value="Charlottetown"></option>
+                <option value="Quebec City"></option>
+                <option value="Regina"></option>
+                <option value="Yellowknife"></option>
+                <option value="Iqaluit"></option>
+                <option value="Whitehorse"></option>
+              </datalist>
+
+              <label for="phoNumber"> Phone Number: </label>
+              <input
+                type="text"
+                id="phoNumber"
+                pattern="^[0-9][0-9][0-9]\s?[0-9][0-9][0-9]\s?[0-9][0-9][0-9][0-9]$"
+                size="25"
+                maxlength="50"
+                title="Must be in Canadian number format"
+                required
+              />
+              <br />
+
+              <label for="postalCode">Postal Code: </label>
+              <input
+                type="text"
+                name="postalCode"
+                id="postalCode"
+                pattern="^[0-9][a-zA-Z][0-9]\s?[a-zA-Z][0-9][a-zA-Z]$"
+                size="35"
+                maxlength="50"
+                title="Must be in Canadian Postal Code format"
+                required
+              />
+              <br />
+
+              Would you like to be phoned?
+              <input id="option" type="checkbox" name="option" />
+              <br />
+
+              Get Help:
+              <div id="checkNum">
+                <label for="question">Question</label>
+                <input id="question" type="radio" name="type" value="question" />
+                <label for="Comment">Comment</label>
+                <input id="Comment" type="radio" name="type" value="Comment" />
+
+                <label for="problem">Order Problem</label>
+                <input id="problem" type="radio" name="type" value="problem" />
+                <br />
+              </div>
+              <div id="orderNumber">
+                <input
+                  type="text"
+                  placeholder="Please enter your order Number"
+                  name="orderNum"
+                  class="hidden"
+                  size="50"
+                />
+                <br />
+              </div>
+
+              <label for="form"></label>
+              <textarea
+                id="form"
+                name="form"
+                placeholder="You can type some messages you want tell us...."
+                cols="60"
+                rows="15"
+              ></textarea>
+            </fieldset>
+            <input type="hidden" name="lastName" id="ltName" value="Sun" />
+            <input type="hidden" name="firstName" id="ftName" value="han" />
+          </form>
+          <input type="submit" form="contactInfo" value="submit" />
+        </div>
+      </main>
+    </div>
+    <div id="errors"></div>
+    <div id="footer">
+      <footer>
+        <form action="https://formspree.io/xqklnojv" method="POST">
+          <p class="sub">Subscribe our newsletter</p>
+          <div class="address">
+            <span>Email Address: </span>
+            <input type="email" name="name" />
+
+            <input type="submit" value="Subscribe" />
+          </div>
+        </form>
+        <div class="foot">
+          <p>
+            Our aim is to share the trend of shoes with you and your love, and provide the best
+            service.
+          </p>
+
+          <p class="center">&copy; 2020 han sun</p>
+        </div>
+      </footer>
+    </div>
+    <!--    
+
+    Part 2: Contact Us Page
+
+    Requirements:
+
+    1. Use the same header/footer, colours, fonts, etc. as your index.html page.
+    It should be obvious to the user they they are still on the same site, and that
+    contact.html is part of your store.
+
+    2. Include an HTML Form for the user to fill out his or her information along
+    with their message to you. Your form should including the following, and all
+    fields should be mandatory unless otherwise noted, and use the most appropriate <input> type:
+    
+        - First Name
+        - Last Name
+        - Email Address
+        - Address
+        - City (use a <datalist> for autocomplete of common Canadian cities)
+        - Phone Number (must be a valid Canadian Phone Number, use regex)
+        - Postal Code (must be a valid Canadian Postal Code, use regex)
+        - Checkbox Option to be phoned ("Would you like to be phoned?")
+        - Radio Options to specify what this is about: one of "Question",
+          "Comment", or "Order Problem". If the user selects "Order Problem",
+          dynamically reveal another input box to enter the order number. In the
+          case of "Comment" or "Question" hide this input box.
+        - A large area to enter the message that they want to send
+        - A hidden input field with your name
+
+    3. The form should submit to https://httpbin.org/post using the POST method,
+    and only allow the user to submit when all data has been entered and there
+    aren't any validation errors.  The data posted to httpbin.org should include
+    all data defined in the form above (e.g., visible and hidden fields).
+
+  -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
